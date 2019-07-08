@@ -211,6 +211,7 @@ exec --no-startup-id gnome-terminal
 exec --no-startup-id brave-browser
 exec --no-startup-id virtualbox
 exec --no-startup-id nextcloud
+exec --no-startup-id compton --config ~/.config/compton.conf
 exec_always --no-startup-id compton
 
 # Audio Control
@@ -220,7 +221,7 @@ bindsym $mod+KP_Up exec --no-startup-id pactl set-sink-volume 0 +5% #increase so
 bindsym $mod+KP_Insert exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Personal changes:
-bindsym $mod+e exec nautilus
+bindsym $mod+e exec nemo
 
 
 # i3-gaps specific stuff:
