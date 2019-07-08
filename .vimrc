@@ -7,7 +7,7 @@ Plug 'tpope/vim-surround' "Plugin to edit sourrounding with cs<vorher><nachher>
 call plug#end()
 
 let mapleader = '-'
-
+set hlsearch
 set nu "displays number of line
 syntax on
 
