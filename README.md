@@ -4,6 +4,7 @@
 * i3 (bzw. [i3-gaps](https://github.com/Airblader/i3) (installation-script in repo)
 * i3blocks
 * rofi
+* arandr
 
 ### i3 block 
 * pip install requests (for BTC/ETC)
