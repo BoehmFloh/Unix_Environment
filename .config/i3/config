@@ -189,7 +189,6 @@ bindsym $mod+r mode "resize"
 bar {
 	position top
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	#status_command ~/Documents/i3/bumblebee-status/bumblebee-status -m getcrypto amixer date time -t solarized
 }
 
 #-------------------------------------------------------------------------------------------------------
