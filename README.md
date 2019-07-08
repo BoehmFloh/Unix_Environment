@@ -5,6 +5,7 @@
 * i3blocks
 * rofi
 * arandr
+* nemo (filebrowser)
 
 ### i3 block 
 * pip install requests (for BTC/ETC)
