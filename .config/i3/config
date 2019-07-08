@@ -205,7 +205,6 @@ exec_always feh --bg-tile /home/boehm40/Pictures/wallpaper.jpg
 # startup
 exec --no-startup-id spotify
 for_window [class="Spotify"] move to workspace $ws10
-for_window [class="GLava"] move to workspace $ws10
 exec --no-startup-id remmina
 exec --no-startup-id gnome-terminal
 exec --no-startup-id brave-browser
@@ -223,9 +222,10 @@ bindsym $mod+KP_Insert exec --no-startup-id pactl set-sink-mute 0 toggle # mute 
 
 # Personal changes:
 bindsym $mod+e exec nemo
+for_window [class="GLava"] move to workspace $ws10
 for_window [instance="GLava"] border none
 for_window [instance="GLava"] floating enable
-for_window [instance="GLava"] [floating] resize set 400 400
+exec --no-startup-id exec ~/.config/i3/set_glava_position
 
 # i3-gaps specific stuff:
 gaps inner 10

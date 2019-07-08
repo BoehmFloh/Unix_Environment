@@ -6,6 +6,7 @@
 * rofi
 * arandr
 * nemo (filebrowser)
+* xdotool
 
 ### i3 block 
 * pip install requests (for BTC/ETC)
