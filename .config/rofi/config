@@ -1,1 +1,4 @@
 rofi.theme: /usr/share/rofi/themes/purple.rasi
+rofi.with: 500
+rofi.lines: 10
+rofi.columns: 2
