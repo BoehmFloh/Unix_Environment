@@ -104,8 +104,8 @@ bindsym $mod+a focus parent
 set $ws1 "1: "
 set $ws2 "2: "
 set $ws3 "3"
-set $ws4 "4"
-set $ws8 "8: "
+set $ws4 "4: "
+set $ws8 "8"
 set $ws9 "9: "
 set $ws10 "10: "
 
@@ -133,11 +133,15 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# bind move workspace to right/left:
+bindsym $mod+Control+odiaeresis move workspace to output right
+bindsym $mod+Control+j move workspace to output left
+
 # bind programs to workspaces:
-assign [class="Gnome-terminal"] $ws1
-assign [class="VirtualBox Manager"] $ws8
+#assign [class="Gnome-terminal"] $ws1
+#assign [class="VirtualBox Manager"] $ws8
 assign [class="org.remmina.Remmina"] $ws9
-assign [class="Brave-browser"] $ws2
+#assign [class="Brave-browser"] $ws2
 #assign [class="Spotify"] $ws10
 
 # bind workspace to monitor:
@@ -147,7 +151,7 @@ set $mon_right "DP-0"
 workspace $ws1 output $mon_right
 workspace $ws2 output $mon_mid
 workspace $ws3 output $mon_left
-workspace $ws8 output $mon_left
+#workspace $ws8 output $mon_left
 workspace $ws9 output $mon_left
 workspace $ws10 output $mon_left
 
@@ -198,6 +202,8 @@ exec_always xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 1920x0 --ro
 
 # Bind lock
 bindsym $mod+Shift+x exec i3lock -i ~/Pictures/lockscreen.png 
+# Bind screenshot
+bindsym $mod+Print exec gnome-screenshot -i
 
 # Set Wallpaper
 exec_always feh --bg-tile ~/Pictures/wallpaper.jpg
@@ -208,10 +214,10 @@ for_window [class="Spotify"] move to workspace $ws10
 exec --no-startup-id remmina
 exec --no-startup-id gnome-terminal
 exec --no-startup-id brave-browser
-exec --no-startup-id virtualbox
+#exec --no-startup-id virtualbox
 exec --no-startup-id nextcloud
-exec --no-startup-id compton --config ~/.config/compton.conf
-exec_always --no-startup-id compton
+#exec --no-startup-id compton --config ~/.config/compton.conf
+#exec_always --no-startup-id compton
 exec --no-startup-id glava -m radial
 
 # Audio Control
@@ -226,6 +232,7 @@ for_window [class="GLava"] move to workspace $ws10
 for_window [instance="GLava"] border none
 for_window [instance="GLava"] floating enable
 exec --no-startup-id exec ~/.config/i3/set_glava_position
+
 
 # i3-gaps specific stuff:
 gaps inner 10
